@@ -17,7 +17,7 @@ Record to the configured Matomo server whenever an item is viewed or full-text o
 v1.0
 
 Initial version
-- based on "OpenAIRE Piwik tracker for EPrints" <https://github.com/openaire/EPrints-LAMatomo>
+- based on "OpenAIRE Piwik tracker for EPrints" <https://github.com/openaire/EPrints-OAPiwik>
 
 =cut
 
