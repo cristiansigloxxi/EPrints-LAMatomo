@@ -38,7 +38,6 @@ sub log
 	$url_tim =~ s/^(\S+) (\S+)$/$1T$2Z/;
 
 	my $oaipmh = EPrints::OpenArchives::to_oai_identifier(
-		###	EPrints::OpenArchives::archive_id( $repo ),
 			_archive_id( $repo ),
 			$access->value( "referent_id" ),
 		);
@@ -49,7 +48,6 @@ sub log
 	#ISO Country Code
 	my $countryID = $repo->config( "LAMatomo", "countryID" );
 
-	#off my $cvar = '{"1":["oaipmhID","'.$oaipmh.'"]}';
 	my $cvar = '{"1":["oaipmhID","'.$oaipmh.'"], "2":["repositoryID","'.$repositoryID.'"], "3":["countryID","'.$countryID.'"]}';
 
 	my $matomorandrange = 10000;
@@ -59,7 +57,6 @@ sub log
 	my $ip= $access->value( "requester_id" );
 
 	#Check IP Anonymization
-
 	my $noOfBytes=$repo->config( "LAMatomo", "noOfBytes" );
 	my $ipanonymized= $ip;
 
